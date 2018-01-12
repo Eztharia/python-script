@@ -10,11 +10,8 @@
 #=======================================================================
 
 # Ecrire un programme pour créer des mots de passealéatoires avec le plus de modularité possible.
-
-import datetime
 import random
 import string
-
 
 def LongueurPassword():
     """ Verification de l'entrée utilisateur """
@@ -32,10 +29,8 @@ def LongueurPassword():
                 print("Erreur : Longeur incorrecte veuillez choisir entre 8 et 24 !")
                 print("------------------------------------------------------------")
 
-
 def generate_password(size, chars=string.digits + string.punctuation + string.ascii_letters):
     return ''.join(random.choice(chars) for _ in range(size))
-
 
 longeur_mot_de_passe = LongueurPassword()
 mot_de_passe = generate_password(longeur_mot_de_passe)
